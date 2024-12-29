@@ -22,7 +22,9 @@ $JAVA_HOME/bin/java -jar target/benchmarks.jar
 
 ## Summary of results
 
-- Machine 1: Windows 10 Pro (22H2) PC with i7-4910 (2.9 GHz) CPU
+- Machine 1: Lenovo ThinkPad W541 with Intel i7-4910MQ (2.9 GHz) under Windows 10 Pro (22H2)
+- Machine 2: Geekom Mini Air 12 with Intel Alder Lake-N100 (3.4 GHz) under Ubuntu 24.04
+- Machine 3: HP Z420 with Intel Xeon E5-1650 (3.2 GHz) under Ubuntu 24.04
 
 | Machine | JRE runtime | JDK source | Jar Version | File/Path | RESULT   | VARIANCE |
 |:-------:|-----------:-|-----------:|------------:|----------:|---------:|---------:|
@@ -34,6 +36,8 @@ $JAVA_HOME/bin/java -jar target/benchmarks.jar
 |    1    | OpenJDK 21  |         21 |       1.3.0 |   File    |    0,054 | +/-0,007 |
 |    1    | OpenJDK 21  |         21 |       1.3.0 |   Path(t) |    0,048 | +/-0,002 |
 |    1    | OpenJDK 21  |         21 |       1.3.0 |   Path(a) |    0,051 | +/-0,001 |
+|    2    | OpenJDK 21  |         21 |       1.3.0 |   Path(a) |    0,047 | +/-0,002 |
+|    3    | OpenJDK 21  |         21 |       1.3.0 |   Path(a) |    0,055 | +/-0,003 |
 
 *File/Path*: Just a test, using `java.nio.file.Path` vs. `java.io.File`.
 - Path(t) means, *Path* is used only in the test
