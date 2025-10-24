@@ -35,7 +35,7 @@ public class ThumbnailCreationBenchmark {
     public void createThumbnailJpeg(String originalFileName) throws Exception {
         final Path originalFile = Path.of(originalFileName);
         final Path thumbnailFile = Files.createTempFile("jmh-imaging-kit-", ".jpg");
-        imagingProvider.createThumbNail(originalFile, thumbnailFile, "image/jpeg",
+        imagingProvider.createThumbnail(originalFile, thumbnailFile, "image/jpeg",
             160, 120, ConversionCommand.CompressionQuality.LOSSY_BEST);
         Files.delete(thumbnailFile);
     }
@@ -45,7 +45,6 @@ public class ThumbnailCreationBenchmark {
             .include(ThumbnailCreationBenchmark.class.getSimpleName())
             .forks(1)
             .build();
-
         new Runner(opt).run();
     }
 }
