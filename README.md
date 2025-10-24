@@ -14,7 +14,6 @@ It tests the creation of JPEG thumbnails (size 160x120 pixels) from different JP
 
 ```shell
 export JAVA_HOME=<Path-to-JDK>
-export JAVA_HOME=<Path-to-JDK>
 mvn clean package
 $JAVA_HOME/bin/java -version
 $JAVA_HOME/bin/java -jar target/benchmarks.jar
