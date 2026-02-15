@@ -4,7 +4,7 @@
 
   <groupId>com.giraone.imaging</groupId>
   <artifactId>imaging-kit-jmh</artifactId>
-  <version>1.4.3</version>
+  <version>1.5.0</version>
   <packaging>jar</packaging>
 
   <name>imaging-kit-jmh</name>
@@ -15,9 +15,9 @@
     <javac.target>21</javac.target>
     <!-- Production dependency versions -->
     <jmh.version>1.37</jmh.version>
-    <imaging-kit.version>1.4.3</imaging-kit.version>
+    <imaging-kit.version>1.5.0-SNAPSHOT</imaging-kit.version>
     <!-- Plugin versions -->
-    <versions-maven-plugin.version>2.19.1</versions-maven-plugin.version>
+    <versions-maven-plugin.version>2.21.0</versions-maven-plugin.version>
     <!-- Name of the benchmark Uber-JAR to generate. -->
     <uberjar.name>benchmarks</uberjar.name>
   </properties>
