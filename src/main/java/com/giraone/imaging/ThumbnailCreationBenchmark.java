@@ -13,6 +13,8 @@ import org.openjdk.jmh.runner.options.OptionsBuilder;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
+import static com.giraone.imaging.MimeTypes.IMAGE_JPEG;
+
 public class ThumbnailCreationBenchmark {
 
     private static final ImagingProvider imagingProvider = new ProviderJava2D();
@@ -35,7 +37,7 @@ public class ThumbnailCreationBenchmark {
     public void createThumbnailJpeg(String originalFileName) throws Exception {
         final Path originalFile = Path.of(originalFileName);
         final Path thumbnailFile = Files.createTempFile("jmh-imaging-kit-", ".jpg");
-        imagingProvider.createThumbnail(originalFile, thumbnailFile, ConversionCommand.MIME_TYPE_JPEG,
+        imagingProvider.createThumbnail(originalFile, thumbnailFile, IMAGE_JPEG,
             160, 120, ConversionCommand.CompressionQuality.LOSSY_BEST);
         Files.delete(thumbnailFile);
     }
