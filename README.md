@@ -40,6 +40,7 @@ $JAVA_HOME/bin/java -jar target/benchmarks.jar
 |    3    | OpenJDK 21  |         21 |       1.3.0 |   Path(a) |    0,055 | +/-0,003 |
 |    1    | OpenJDK 21.0.8  |     21 |       1.3.1 |   Path(a) |    0,053 | +/-0,008 |
 |    4    | OpenJDK 21.0.8  |     21 |       1.3.1 |   Path(a) |    0.053 | +/-0,002 |
+|    1    | OpenJDK 21.1.12 |     21 |       2.1.1 |   Path(a) |    0.066 | +/-0,015 |
 
 *File/Path*: Just a test, using `java.nio.file.Path` vs. `java.io.File`.
 - Path(t) means, *Path* is used only in the test

@@ -4,7 +4,7 @@
 
   <groupId>com.giraone.imaging</groupId>
   <artifactId>imaging-kit-jmh</artifactId>
-  <version>2.1.0</version>
+  <version>2.1.1</version>
   <packaging>jar</packaging>
 
   <name>imaging-kit-jmh</name>
@@ -15,9 +15,9 @@
     <javac.target>21</javac.target>
     <!-- Production dependency versions -->
     <jmh.version>1.37</jmh.version>
-    <imaging-kit.version>2.0.0-SNAPSHOT</imaging-kit.version>
+    <imaging-kit.version>2.1.1</imaging-kit.version>
     <!-- Plugin versions -->
-    <versions-maven-plugin.version>2.21.0</versions-maven-plugin.version>
+    <versions-maven-plugin.version>2.23.0</versions-maven-plugin.version>
     <!-- Name of the benchmark Uber-JAR to generate. -->
     <uberjar.name>benchmarks</uberjar.name>
   </properties>
@@ -57,7 +57,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-shade-plugin</artifactId>
-        <version>3.6.0</version>
+        <version>3.6.2</version>
         <executions>
           <execution>
             <phase>package</phase>
@@ -81,8 +81,13 @@
                   <artifact>*:*</artifact>
                   <excludes>
                     <exclude>META-INF/*.SF</exclude>
+                    <exclude>META-INF/*.MF</exclude>
                     <exclude>META-INF/*.DSA</exclude>
                     <exclude>META-INF/*.RSA</exclude>
+                    <exclude>META-INF/DEPENDENCIES</exclude>
+                    <exclude>META-INF/NOTICE*</exclude>
+                    <exclude>META-INF/LICENSE*</exclude>
+                    <exclude>META-INF/version*</exclude>
                   </excludes>
                 </filter>
               </filters>
@@ -108,11 +113,11 @@
         </plugin>
         <plugin>
           <artifactId>maven-deploy-plugin</artifactId>
-          <version>3.1.4</version>
+          <version>3.2.0</version>
         </plugin>
         <plugin>
           <artifactId>maven-install-plugin</artifactId>
-          <version>3.1.4</version>
+          <version>3.2.0</version>
         </plugin>
         <plugin>
           <artifactId>maven-jar-plugin</artifactId>
